@@ -1,0 +1,16 @@
+.container {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, button {
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+}
