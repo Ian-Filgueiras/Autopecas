@@ -43,7 +43,7 @@ session_destroy();
 <body>
     <div class="container">
         <h1>Cadastro de Peças</h1>
-        <form id="cadastroForm" action="cadastro.php" method="post">
+        <form id="cadastroForm" action="_scripts/cadastro.php" method="post">
             <label for="nome">Nome da Peça:</label>
             <input type="text" id="nome" name="nome" required>
             <label for="fornecedor">Fornecedor:</label>
@@ -58,7 +58,7 @@ session_destroy();
 
     <div class="container">
         <h1>Tela de Venda</h1>
-        <form id="vendaForm" action="venda.php" method="post">
+        <form id="vendaForm" action="_scripts/venda.php" method="post">
             <label for="codPeca">Código da Peça:</label>
             <input type="text" id="codPeca" name="codPeca" required>
             <label for="nomePeca">Nome da Peça:</label>
