@@ -11,7 +11,7 @@ $sql = "INSERT INTO venda_pecas (nome,fornecedor,valorCompra,valorVenda,total) V
 $query = $mysqli->query($sql);
 
 if($query){
-    echo "<script>alert('Cadastro Realizado');</script>";
+    echo "<script>alert('Venda Realizada');</script>";
 }else{
     echo "<script>alert('Login inválido');</script>";
     echo "<script>window.location='../index.php'</script>";

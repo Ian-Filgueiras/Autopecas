@@ -4,9 +4,9 @@ include "config.php";
 $nome = $_POST['nome'];
 $fornecedor = $_POST['fornecedor'];
 $valorCompra = $_POST['valorCompra'];
-$valorVendaC = $_POST['valorVendaC'];
+$valorVenda = $_POST['valorVenda'];
 
-$sql = "INSERT INTO cad_pecas (nome,fornecedor,valorCompra,valorVenda) VALUES ('$nome','$fornecedor','$valorCompra','$valorVendaC')";
+$sql = "INSERT INTO cad_pecas (nome,fornecedor,valorCompra,valorVenda) VALUES ('$nome','$fornecedor','$valorCompra','$valorVenda')";
 $query = $mysqli->query($sql);
 
 if($query){

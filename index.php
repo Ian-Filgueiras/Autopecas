@@ -82,5 +82,3 @@ session_destroy();
     <script src="script.js"></script>
 </body>
 </html>
-
-
