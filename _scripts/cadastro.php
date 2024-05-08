@@ -11,6 +11,7 @@ $query = $mysqli->query($sql);
 
 if($query){
     echo "<script>alert('Cadastro Realizado');</script>";
+    echo "<script>window.location='../index.php'</script>";
 }else{
     echo "<script>alert('Login inválido');</script>";
     echo "<script>window.location='../index.php'</script>";

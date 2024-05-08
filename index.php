@@ -37,6 +37,7 @@ session_destroy();
       });
 
     </script>
+    
     <title>Cadastro de Peças</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -69,6 +70,7 @@ session_destroy();
             <input type="number" id="quantidade" name="quantidade" required>
             <label for="total">Total:</label>
             <input type="text" id="total" name="total">
+            <button type="button" onclick="calcular()">calcular</button>
             <button type="submit">Vender</button>
         </form>
     </div>
@@ -78,7 +80,7 @@ session_destroy();
         <div id="calendar"></div>
     </div>
 
-    
     <script src="script.js"></script>
+   
 </body>
 </html>

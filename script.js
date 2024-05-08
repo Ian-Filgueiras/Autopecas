@@ -1,17 +1,13 @@
-document.getElementById('vendaForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    // Seu código JavaScript aqui
+    function calcular() {
+        var valorVenda = parseFloat(document.getElementById("valorVenda").value);
+        var quantidade = parseInt(document.getElementById("quantidade").value);
 
-    let valorVenda = parseFloat(document.getElementById('vendaForm').querySelector('#valorVenda').value);
-    let quantidade = parseInt(document.getElementById('vendaForm').querySelector('#quantidade').value);
+        var total = valorVenda * quantidade;
 
-    // Validar se os valores são válidos
-    if (!isNaN(valorVenda) && !isNaN(quantidade)) {
-        let total = valorVenda * quantidade;
-        document.getElementById('total').value = total.toFixed(2);
-    } else {
-        alert('Por favor, preencha os campos Valor de Venda e Quantidade corretamente.');
+        document.getElementById("total").value = total.toFixed(2);
     }
+
+    // Adicione outros códigos JavaScript, se necessário
 });
-
-
-
