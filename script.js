@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Seu código JavaScript aqui
-    function calcular() {
-        var valorVenda = parseFloat(document.getElementById("valorVenda").value);
-        var quantidade = parseInt(document.getElementById("quantidade").value);
+    var calcularButton = document.getElementById("calcularButton");
 
-        var total = valorVenda * quantidade;
-
-        document.getElementById("total").value = total.toFixed(2);
-    }
-
-    // Adicione outros códigos JavaScript, se necessário
+    calcularButton.addEventListener("click", function() {
+        var valorVenda = document.getElementById("valorVendaV").value;
+        var quantidade = document.getElementById("quantidade").value;
+        var total = parseFloat(valorVenda) * parseInt(quantidade);
+        document.getElementById("total").value = total.toFixed(2); // Arredonde para 2 casas decimais
+    });
 });
+
+

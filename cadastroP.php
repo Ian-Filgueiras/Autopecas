@@ -76,54 +76,6 @@ session_destroy();
             <button type="submit">Cadastrar</button>
         </form>
     </div>
-    <table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>fornecedor</th>
-                <th>valorCompra</th>
-                <th>valorVenda</th>
-                <th>&nbsp;</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            include "./_scripts/config.php";
-            $sql = "SELECT * FROM cad_pecas";
-            $query  = $mysqli->query($sql);
-            $dados = $query->fetch_array();
-            while ($dados = $query->fetch_array()) {
-            ?>
-                <tr>
-                    <td><?php echo $dados['nome']; ?></td>
-                    <td><?php echo $dados['fornecedor']; ?></td>
-                    <td><?php echo $dados['valorCompra']; ?></td>
-                    <td><?php echo $dados['valorVenda']; ?></td>
-                </tr>
-            <?php } ?>
-    <div class="container">
-            <h1>Tela de Venda</h1>
-            <form id="vendaForm" action="_scripts/venda.php" method="post">
-                <label for="codPeca">Código da Peça:</label>
-                <input type="text" id="codPeca" name="codPeca" required>
-                <label for="nomePeca">Nome da Peça:</label>
-                <input type="text" id="nomePeca" name="nomePeca" required>
-                <label for="valorVenda">Valor de Venda:</label>
-                <input type="number" id="valorVenda" name="valorVenda" required>
-                <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade" required>
-                <label for="total">Total:</label>
-                <input type="text" id="total" name="total">
-                <button type="button" id="calcularButton">calcular</button>
-                <button type="submit">Vender</button>
-            </form>
-        </div>
-
-        <div class="container">
-            <h1>Calendário de Cadastro</h1>
-            <div id="calendar"></div>
-        </div>
-
 
 
 </body>
