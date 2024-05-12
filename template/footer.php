@@ -29,3 +29,5 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>

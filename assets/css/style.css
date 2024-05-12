@@ -1001,18 +1001,22 @@ section {
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
-  background: #149ddd;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type=button]:hover {
   background: #37b3ed;
 }
+
+.contact .container .php-email-form .a{
+  background: #149ddd !important;
+  border: 0 !important;
+  padding: 10px 24px !important;
+  color: #fff !important;
+  transition: 0.4s !important;
+  border-radius: 4px !important;
+}
+
+
+
 
 @keyframes animate-loading {
   0% {
