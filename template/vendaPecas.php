@@ -55,7 +55,7 @@
             });
 
             // Evento de clique na linha da tabela
-            $('.linha-tabela').on('click', function() {
+            $('#example tbody').on('click', '.linha-tabela', function() {
                 var rowData = $(this).children('td').map(function() {
                     return $(this).text();
                 }).get();
@@ -154,7 +154,6 @@
                                 include "../_scripts/config.php";
                                 $sql = "SELECT * FROM cad_pecas";
                                 $query  = $mysqli->query($sql);
-                                $dados = $query->fetch_array();
                                 while ($dados = $query->fetch_array()) {
                                 ?>
                                     <tr>
