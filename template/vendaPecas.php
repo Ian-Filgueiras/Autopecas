@@ -48,7 +48,24 @@
 
     <script>
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#example').DataTable({
+                "createdRow": function(row, data, dataIndex) {
+                    $(row).addClass('linha-tabela');
+                }
+            });
+
+            // Evento de clique na linha da tabela
+            $('.linha-tabela').on('click', function() {
+                var rowData = $(this).children('td').map(function() {
+                    return $(this).text();
+                }).get();
+
+                
+                $('#codPeca').val(rowData[0]); 
+                $('#nomePeca').val(rowData[1]); 
+                $('#valorVenda').val(rowData[4]); 
+                
+            });
         });
     </script>
 </head>
@@ -125,6 +142,7 @@
                         <table id="example" class="display" style="width:100%">
                             <thead>
                                 <tr>
+                                    <th>codPeca</th>
                                     <th>nome</th>
                                     <th>fornecedor</th>
                                     <th>valorCompra</th>
@@ -140,6 +158,7 @@
                                 while ($dados = $query->fetch_array()) {
                                 ?>
                                     <tr>
+                                        <td><?php echo $dados['id']; ?></td>
                                         <td><?php echo $dados['nome']; ?></td>
                                         <td><?php echo $dados['fornecedor']; ?></td>
                                         <td><?php echo $dados['valorCompra']; ?></td>
