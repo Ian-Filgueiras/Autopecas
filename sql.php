@@ -19,5 +19,6 @@ create table venda_pecas(
     quantidade float,
     total float,
     dataHora date default current_timestamp
+    FOREIGN KEY (codPeca) REFERENCES cad_pecas(id)
 
 );
